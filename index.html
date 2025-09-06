@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Data Selling Pay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="emoji">✨</div>
+  <h1>Data-Selling — Quick Pay</h1>
+</header>
+
+<main class="container">
+  <section class="card pay-card">
+    <h2>Pay Now</h2>
+    <p class="small">UPI ID: <strong>6005099281@mbk</strong></p>
+    <p class="price">Price: ₹79 only</p>
+    <div class="buttons">
+      <a class="pay-btn" href="upi://pay?pa=6005099281@mbk&am=79&cu=INR">Pay with GPay</a>
+      <a class="pay-btn" href="upi://pay?pa=6005099281@mbk&am=79&cu=INR">Pay with Paytm</a>
+      <a class="pay-btn" href="upi://pay?pa=6005099281@mbk&am=79&cu=INR">Pay with PhonePe</a>
+      <button id="scan-qr">Scan QR</button>
+    </div>
+
+    <div class="qr-block" id="qr-block" aria-hidden="true">
+      <img src="assets/qr.png" alt="Payment QR code">
+      <p>Scan this QR from any UPI app to pay ₹79.</p>
+    </div>
+
+    <div class="after-pay" id="after-pay" aria-hidden="true">
+      <p class="notice">Your payment is about to be received, please proceed…</p>
+      <label>After payment enter your Transaction/UTR ID:</label>
+      <input id="utr" placeholder="Enter UTR / Txn ID">
+      <button id="submit-utr">Submit UTR</button>
+      <p id="utr-msg" class="muted"></p>
+    </div>
+  </section>
+
+  <section class="card refund-card">
+    <h2>Refund Request</h2>
+    <p>If you need a refund, submit your details below.</p>
+    <label>Transaction/UTR ID:</label>
+    <input id="refund-utr" placeholder="Enter UTR / Txn ID">
+    <label>Reason:</label>
+    <input id="refund-reason" placeholder="Enter reason for refund">
+    <button id="submit-refund">Request Refund</button>
+    <p id="refund-msg" class="muted"></p>
+  </section>
+
+  <section class="card contact-card">
+    <h2>Get App</h2>
+    <a id="get-app" class="get-app" href="#" target="_blank" rel="noopener">Get App</a>
+
+    <h2>WhatsApp Support</h2>
+    <a id="whatsapp-btn" class="whatsapp" href="#" target="_blank" rel="noopener">Contact on WhatsApp</a>
+  </section>
+</main>
+
+<div id="notif-container" class="notif-container"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
